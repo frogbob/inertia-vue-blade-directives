@@ -1,5 +1,13 @@
 # Common Blade-Directives for Internia.js Vue-Adapter
 
+![Inertia Vue Blade Directives](http://api.devbar.ultrabold.de/github?text=Inertia.js%20Vue%20Blade-Directives)
+
+### Docs
+
+* [Installation](#installation)
+* [Implementing directives](#implementing-directives)
+* [Using directives](#using-directives)
+
 ## Installation
 
 Install using NPM:
