@@ -4,9 +4,16 @@
 
 ### Docs
 
+* [Prerequisites](#prerequisites)
 * [Installation](#installation)
 * [Implementing directives](#implementing-directives)
 * [Using directives](#using-directives)
+
+## Prerequisites
+
+**Please note**
+
+In order to make these directive work you have to install the [inertia-laravel-blade-directives](https://github.com/frogbob/inertia-laravel-blade-directives)-package in your laravel-application.
 
 ## Installation
 
