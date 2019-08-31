@@ -8,12 +8,37 @@
 * [Installation](#installation)
 * [Implementing directives](#implementing-directives)
 * [Using directives](#using-directives)
+* [Closing line](#closing-line)
 
 ## Prerequisites
 
 **Please note**
 
-In order to make these directive work you have to install the [inertia-laravel-blade-share](https://github.com/frogbob/inertia-laravel-blade-share)-package in your laravel-application.
+In order to make these directives work, you have to share some data from laravel to vue via [inertia-laravel-adapter]().
+Just put this code into app/Providers/AppServiceProvider (or your custom Provider if you want) in boot-method:
+
+~~~php
+use Inertia\Inertia;
+
+...
+
+Inertia::share([
+    'auth' => function() {
+        return auth()->check();
+    },
+    'csrf_token' => function() {
+        return session()->get('_token');
+    },
+    'errors' => function() {
+        return session()->get('errors', new MessageBag);
+    }
+]);
+
+~~~
+
+If you want to share other data with vue, feel free to add more data to share-array.
+
+Or if you just want to make this package work you can install our helper-package [Inertia Laravel Blade Share](https://github.com/frogbob/inertia-laravel-blade-share) in your laravel system and you are good to go.
 
 ## Installation
 
@@ -77,3 +102,14 @@ Within an <error> directive, you may echo the :MESSAGE variable to display the e
     <div class="alert alert-danger">:MESSAGE</div>
 </error>
 ~~~
+
+## Closing line
+Some will ask, why the heck you need vue-components, if you can access data by ```this.$page```?
+We think inertia.js is awesome. But also we liked blade-directives.
+In our opinion its much more readable if you see whats going on in your code. If you use tons of this.$page statements in your code this could be a little confusing after a time.
+
+```<auth>Hi, Admin</auth>``` makes clear, all of it slot-content is only shown, if you are a authenticated user, right?
+
+If you have suggestions for missing directives or better code feel free to make pull-requests. Or if you have found a bug, please create an issue and let us know.
+
+Thank you!
