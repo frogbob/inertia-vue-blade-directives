@@ -61,6 +61,7 @@ the CSRF protection middleware can validate the request. You may use the <csrf> 
 ~~~html
 <csrf/>
 ~~~
+*Maybe this is not a useful component since inertia-vue uses ajax for form-requests but for the sake of completeness we included this.*
 
 ### Method `<method>`
 Type: PUT, PATCH, or DELETE
