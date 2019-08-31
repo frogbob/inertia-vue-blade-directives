@@ -106,6 +106,7 @@ Within an <error> directive, you may echo the :MESSAGE variable to display the e
 Some will ask, why the heck you need vue-components, if you can access data by ```this.$page```?
 We think inertia.js is awesome. But also we liked blade-directives.
 In our opinion its much more readable if you see whats going on in your code. If you use tons of this.$page statements in your code this could be a little confusing after a time.
+
 ```<auth>Hi, Admin</auth>``` makes clear, all of it slot-content is only shown, if you are a authenticated user, right?
 
 If you have suggestions for missing directives or better code feel free to make pull-requests. Or if you have found a bug, please create an issue and let us know.
