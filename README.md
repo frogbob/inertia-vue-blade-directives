@@ -1,4 +1,4 @@
-# Common Blade-Directives for Internia.js Vue-Adapter
+# Common Blade-Directives for Inertia.js Vue-Adapter
 
 ![Inertia Vue Blade Directives](http://api.devbar.ultrabold.de/github?text=Inertia.js%20Vue%20Blade-Directives)
 
